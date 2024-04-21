@@ -15,10 +15,14 @@ def parse_sentence(chars: str) -> list[str]:
         new_string += char
     return new_string.split(' ')
 
+def print_repetition(words_count: dict) -> None:
+    for key, value in words_count.items():
+        print(key, value)
+
 
 if __name__ == '__main__':
     sentence = 'Salut, la vie est salut'
 
     x = analyse(parse_sentence(sentence))
 
-    print(x)
+    print_repetition(x)
